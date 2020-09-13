@@ -1,20 +1,22 @@
-import cv2
+"""module to extract frames"""
 import os
+import cv2
 
 # the video to be processed
-vidcap = cv2.VideoCapture('video/v7.mp4')
+VIDCAP = cv2.VideoCapture('video/v7.mp4')
 
 # reading the video
-success,frames = vidcap.read()
+SUCCESS, FRAMES = VIDCAP.read()
 
 # to name each frame starting from 1
-count = 1
-success = True
+COUNT = 1
+SUCCESS = True
 
 # saving frames in a folder
-while success:
-    success,frames = vidcap.read()
-    print "Read a new frame: ", success
+while SUCCESS:
+    SUCCESS, FRAMES = VIDCAP.read()
+    print("Read a new frame: ", SUCCESS)
     # save frame as JPEG file
-    cv2.imwrite(os.path.join("/home/rishi/Documents/sandbox/jump_cut/v7_frame", "frame%d.jpg") % count, frames)
-    count += 1
+    cv2.imwrite(os.path.join("/home/rishi/Documents/sandbox/jump_cut/v7_frame", "frame%d.jpg")
+                % COUNT, FRAMES)
+    COUNT += 1

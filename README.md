@@ -2,7 +2,7 @@
 Jump Cut detection project
 
 # Note
-* dipFuntions.py contains all the basic functions.
+* dip_functions.py contains all the basic functions.
 * extract_frames.py extract the frames from the video
 * train.py trains the model
 
